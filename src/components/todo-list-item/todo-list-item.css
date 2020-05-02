@@ -1,0 +1,28 @@
+.todo-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-list-item.important {
+    font-weight: bold;
+    color: var(--info);
+}
+
+.todo-list-item.done {
+    text-decoration: line-through;
+}
+
+.todo-list-item .todo-text {
+    font-size: 1.35rem;
+    cursor: pointer;
+}
+
+.todo-list-item button {
+    line-height: 1rem;
+    height: 2rem;
+    font-size: 1rem;
+    padding: .25rem;
+    margin-left: .5rem;
+    width: 2rem
+}
