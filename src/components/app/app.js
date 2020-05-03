@@ -10,6 +10,8 @@ export default class App extends Component {
   constructor (props) {
     super(props)
     const storageTodos = window.localStorage.getItem('todos')
+    const storageCurrentID = window.localStorage.getItem('currentID')
+    this.currentID = storageCurrentID === null ? 0 : Number(storageCurrentID)
     this.state = {
       todos: storageTodos === null
         ? [
@@ -24,9 +26,8 @@ export default class App extends Component {
 
   componentDidUpdate (prevProps, prevState, snapshot) {
     window.localStorage.setItem('todos', JSON.stringify(this.state.todos))
+    window.localStorage.setItem('currentID', String(this.currentID))
   }
-
-  currentID = 0
 
   createTodoItem (text) {
     this.currentID += 1
