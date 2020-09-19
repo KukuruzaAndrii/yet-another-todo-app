@@ -33,7 +33,7 @@ export default class AddItemForm extends Component {
         </button>
         <input
           value={this.state.text}
-          className='form-control search-input mr-2'
+          className='form-control mr-2'
           placeholder='Add what you need to be done'
           type='text'
           onChange={this.handleTextChange}

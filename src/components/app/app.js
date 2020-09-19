@@ -87,7 +87,7 @@ export default class App extends Component {
     const { todos, term, filter: filterType } = this.state
     const doneCount = todos.filter(t => t.done).length
     const todoCount = todos.length - doneCount
-    const visibleItems = this.filterItems(todos, filterType).filter(({ text }) => text.includes(term))
+    const visibleItems = this.filterItems(todos, filterType).filter(({ text }) => text.toLowerCase().includes(term.toLowerCase()))
     return (
       <div className='app-container'>
         <AppHeader todo={todoCount} done={doneCount} />

@@ -2,3 +2,7 @@
     margin: 1% auto;
     max-width: 600px;
 }
+
+.form-control:focus, .btn:focus, .btn:active:focus, .btn.active:focus {
+    box-shadow: none !important
+}
